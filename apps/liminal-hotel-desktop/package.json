@@ -1,0 +1,25 @@
+{
+  "name": "liminal-hotel-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/main/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:main && npm run build:preload",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:preload": "tsc -p tsconfig.preload.json",
+    "dev": "npm run build && electron .",
+    "start": "electron .",
+    "package": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "electron": "^28.2.5",
+    "electron-builder": "^24.6.4",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "portfinder": "^1.0.32"
+  }
+}

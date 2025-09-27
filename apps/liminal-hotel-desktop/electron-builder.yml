@@ -1,0 +1,17 @@
+appId: com.liminal.hotel
+productName: Liminal Hotel
+files:
+  - dist/main/**/*
+  - dist/preload/**/*
+  - ../../web/liminal-hotel/dist/**/*
+extraFiles:
+  - from: ../../server/dist
+    to: resources/server
+mac:
+  category: public.app-category.games
+linux:
+  target:
+    - AppImage
+win:
+  target:
+    - nsis
